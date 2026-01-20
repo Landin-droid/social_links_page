@@ -1,0 +1,106 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf")
+    format("truetype-variations");
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf")
+    format("truetype") tech("variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+:root {
+  --font-family: "Inter", sans-serif;
+  --color-green: hsl(75, 94%, 57%);
+  --color-grey-700: hsl(0, 0%, 20%);
+  --color-grey-800: hsl(0, 0%, 12%);
+  --color-grey-900: hsl(0, 0%, 8%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-grey-700);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.author__card {
+  background-color: var(--color-grey-800);
+  padding: 3rem 4rem;
+  border-radius: 15px;
+}
+
+.author__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.author__info img {
+  width: fit-content;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.author__name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.author__location {
+  font-size: 0.875rem;
+  color: var(--color-green);
+  font-weight: 700;
+}
+
+.author__job {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.author__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.li__social {
+  width: 120%;
+}
+
+.link__social {
+  background-color: var(--color-grey-700);
+  border-radius: 8px;
+  display: block;
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 0.75rem 0;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.link__social:hover,  .link__social:active, .link__social:focus {
+  color: var(--color-grey-900);
+  background-color: var(--color-green);
+}
+
+.link__social:focus {
+  outline: solid 2px var(--color-white);
+}
